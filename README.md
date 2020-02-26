@@ -1,3 +1,59 @@
+**Категории**
+----
+  Возвращает json-данные со списком категорий товаров
+
+* **URL**
+
+  /api/categories
+
+* **Method:**
+
+  `GET`
+  
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+```json {
+    "data": [
+        {
+            "id": 1,
+            "value": "Пиво",
+            "created_at": null,
+            "updated_at": null
+        },
+        {
+            "id": 2,
+            "value": "Сидр",
+            "created_at": null,
+            "updated_at": null
+        }
+    ],
+    "links": {
+        "first": "http://svam.test/api/categories?page=1",
+        "last": "http://svam.test/api/categories?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://svam.test/api/categories",
+        "per_page": 15,
+        "to": 2,
+        "total": 2
+    }
+}
+```
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Object doesn't exist" }`
+
 **Товары в категории**
 ----
   Возвращает json-данные о товарах в категории
