@@ -79,38 +79,43 @@
     **Content:** 
 ```json {
     "type": "category",
-    "id": 2,
-    "value": "Сидр",
+    "id": 1,
+    "value": "Пиво",
     "attributes": {
-        "drinks": {
-            "current_page": 1,
-            "data": [
-                {
-                    "drink_id": 47,
-                    "name": "Aracely Fritsch",
-                    "type_id": 2,
-                    "unit": "литр",
-                    "country": "United Kingdom",
-                    "style": "Best",
+        "drinks": [
+            {
+                "type": "drinks",
+                "drink_id": 2,
+                "attributes": {
+                    "name": "Prof. Elliot Schaden MD",
+                    "descript": "Лучший пивчанский на планете",
+                    "country": "Россия",
+                    "style": "Топ пивчик",
                     "strength": "66.6%",
                     "manufacturer": "Рога и копыта",
                     "density": "66.6%",
                     "expdate": "24 мес.",
                     "fermentation": "верховое",
-                    "descript": "Лучший пивчанский на планете",
-                    "price": "666.6000",
-                    "1c_id": "askdjaklsjdklsajdklasjdlkewj",
-                    "created_at": "2020-02-13 09:25:36",
-                    "updated_at": "2020-02-13 09:25:36",
-                    "balance": null
+                    "packing": [
+                        {
+                            "id": 2,
+                            "price": "1595.0000",
+                            "pack": "Кег 20L",
+                            "balance": 100,
+                            "1c_id": "DUjG3yDxLc",
+                            "addBasket": "http://svam.test/api/basket/add/2"
+                        }
+                    ],
+                    "link": "http://svam.test/api/drinks/2"
                 }
+            },
             ],
-            "first_page_url": "http://svam.test/api/categories/2?page=1",
+            "first_page_url": "http://svam.test/api/categories/1?page=1",
             "from": 1,
             "last_page": 1,
-            "last_page_url": "http://svam.test/api/categories/2?page=1",
+            "last_page_url": "http://svam.test/api/categories/1?page=1",
             "next_page_url": null,
-            "path": "http://svam.test/api/categories/2",
+            "path": "http://svam.test/api/categories/1",
             "per_page": 15,
             "prev_page_url": null,
             "to": 1,
