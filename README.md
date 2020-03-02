@@ -178,3 +178,110 @@
   * **Code:** 403 Forbiden <br />
     **Content:** `{ error : "No access rights" }`
 
+* **Дополнительно** 
+  
+  В случае с товарами реализуется следующая структура, поскольку у каждого напитка есть тары разного объема и исходя из этого разной цены за литр, то введен механизм торговых предложений. В разделе packing json-ответа указывается массив торговых предложений для товара.
+
+
+**Корзина**
+----
+   Корзина авторизованного пользователя
+
+* **URL**
+
+  /api/basket
+
+* **Method:**
+
+  `GET`
+  
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+```json 
+  {
+    "data": {
+        "basket": [
+            {
+                "type": "offers",
+                "user_id": 12,
+                "offer_id": 11,
+                "attributes": {
+                    "name": "Mrs. Cortney Stark Sr.",
+                    "logo": null,
+                    "price": "5423.0000",
+                    "packing": "Кег 20L"
+                }
+            },
+            {
+                "type": "offers",
+                "user_id": 12,
+                "offer_id": 2,
+                "attributes": {
+                    "name": "Prof. Elliot Schaden MD",
+                    "logo": null,
+                    "price": "1595.0000",
+                    "packing": "Кег 20L"
+                }
+            }
+        ],
+        "summ": 7018
+    },
+    "links": {
+        "first": "http://ec2-13-58-10-252.us-east-2.compute.amazonaws.com/api/basket?page=1",
+        "last": "http://ec2-13-58-10-252.us-east-2.compute.amazonaws.com/api/basket?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://ec2-13-58-10-252.us-east-2.compute.amazonaws.com/api/basket",
+        "per_page": 15,
+        "to": 6,
+        "total": 6
+    }
+  }
+```
+
+* **Error Response:**
+
+  * **Code:** 403 Forbiden <br />
+    **Content:** `{ error : "No access rights" }`
+
+
+**Добавление в корзину**
+----
+   Добавить торговое предложение в корзину
+
+* **URL**
+
+  /api/basket/:id
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+
+   **Обязательные:**
+ 
+   `id=[integer]` - id торгового прделожения
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+```json 
+{
+    "message": "Prof. Elliot Schaden MD add to basket"
+}
+```
+
+* **Error Response:**
+
+  * **Code:** 403 Forbiden <br />
+    **Content:** `{ error : "No access rights" }`
