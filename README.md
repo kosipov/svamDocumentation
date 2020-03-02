@@ -2,7 +2,7 @@
 ----
 Для выполнения запроса к сервису обязательно необходимо передавать заголовок `Accept: application/json`. 
 Для авторизованного пользователя необходимо также в заголовках передавать его access token. Формат передачи:
-`Authorization Bearer accesstoken`
+`Authorization: Bearer accesstoken`
 
 **Аутентификация**
 ----
