@@ -518,3 +518,40 @@
 
   * **Code:** 403 Forbidden <br />
     **Content:** `{"message": "No access rights"}`      
+
+
+**Список свойств товаров**
+----
+  Возвращает список свойств товаров с русским комментарием
+
+* **URL**
+
+  /api/drinks/properties
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "data": [
+            {
+                "id": 1,
+                "json_value": "country",
+                "ru_value": "Страна",
+                "created_at": null,
+                "updated_at": null
+            },
+            {
+                "id": 2,
+                "json_value": "style",
+                "ru_value": "Стиль",
+                "created_at": null,
+                "updated_at": null
+            },
+    ```
+    
