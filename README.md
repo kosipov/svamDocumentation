@@ -540,18 +540,12 @@
     {
         "data": [
             {
-                "id": 1,
                 "json_value": "country",
                 "ru_value": "Страна",
-                "created_at": null,
-                "updated_at": null
             },
             {
-                "id": 2,
                 "json_value": "style",
                 "ru_value": "Стиль",
-                "created_at": null,
-                "updated_at": null
             },
     ```
     
