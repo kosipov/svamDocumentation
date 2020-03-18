@@ -430,18 +430,6 @@ Refresh-token необходим для обновления access-токена
 
   `GET`
 
-* **Тело запроса**
-  
-  ``` json
-  {
-        "grant_type": "password",
-        "client_id": id,
-        "client_secret": "соответствующее значение",
-        "username": "email@email.ru",
-        "password": "pass",
-        "scope": "*"
-  }
-  ```
 
 * **Success Response:**
 
