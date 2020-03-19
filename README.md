@@ -212,33 +212,33 @@ Refresh-token необходим для обновления access-токена
     "type": "category",
     "id": 1,
     "value": "Пиво",
-    "attributes": {
+    "relationships": {
         "drinks": [
             {
                 "type": "drinks",
                 "drink_id": 2,
                 "attributes": {
                     "name": "Prof. Elliot Schaden MD",
-                    "descript": "Лучший пивчанский на планете",
                     "country": "Россия",
-                    "style": "Топ пивчик",
-                    "strength": "66.6%",
-                    "manufacturer": "Рога и копыта",
-                    "density": "66.6%",
-                    "expdate": "24 мес.",
-                    "fermentation": "верховое",
+                    "properties": {
+                        "density": "12.0%",
+                        "strength": "5.0%"
+                    },
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/1199"
+                },
+                "relationships": {
                     "packing": [
                         {
-                            "id": 2,
-                            "price": "1595.0000",
+                            "id": 1196,
+                            "price": "7868.0000",
                             "pack": "Кег 20L",
-                            "balance": 100,
-                            "1c_id": "DUjG3yDxLc",
-                            "addBasket": "http://svam.test/api/basket/add/2"
+                            "balance": 25,
+                            "1c_id": "bRLsTRNnhO",
+                            "addBasket": "http://svam.test/api/basket/add/1196"
                         }
-                    ],
-                    "link": "http://svam.test/api/drinks/2"
-                }
+                    ]
+                }                    
             },
             ],
             "first_page_url": "http://svam.test/api/categories/1?page=1",
@@ -547,7 +547,7 @@ Refresh-token необходим для обновления access-токена
 
 **Список свойств товаров**
 ----
-  Возвращает список свойств товаров с русским комментарием
+  Возвращает список свойств товаров с русским комментарием и с возможными значениями для фильтрации
 
 * **URL**
 
@@ -562,15 +562,112 @@ Refresh-token необходим для обновления access-токена
   * **Code:** 200 <br />
     **Content:** 
     ```json 
-    {
-        "data": [
-            {
-                "json_value": "country",
-                "ru_value": "Страна",
-            },
-            {
-                "json_value": "style",
-                "ru_value": "Стиль",
-            },
+    [
+                {
+                    "json_value": "country",
+                    "ru_value": "Страна",
+                    "values": [
+                        "Argentina",
+                        "Bhutan",
+                        "British Virgin Islands",
+                        "Canada",
+                        "Cape Verde",
+                        "Cocos (Keeling) Islands",
+                        "Costa Rica",
+                        "Cyprus",
+                        "Fiji",
+                        "Greece",
+                        "Guadeloupe",
+                        "Haiti",
+                        "Heard Island and McDonald Islands",
+                        "Iceland",
+                        "Isle of Man",
+                        "Korea",
+                        "Lebanon",
+                        "Lesotho",
+                        "Liechtenstein",
+                        "Mayotte",
+                        "Mexico",
+                        "Micronesia",
+                        "Moldova",
+                        "Norfolk Island",
+                        "Oman",
+                        "Pakistan",
+                        "Papua New Guinea",
+                        "Puerto Rico",
+                        "Saint Helena",
+                        "Saint Lucia",
+                        "Samoa",
+                        "San Marino",
+                        "Seychelles",
+                        "Sri Lanka",
+                        "Thailand",
+                        "Turkey",
+                        "Western Sahara"
+                    ]
+                },
+                {
+                    "json_value": "manufacturer",
+                    "ru_value": "Производитель",
+                    "values": [
+                        "Philip Mayer",
+                        "Рога и копыта"
+                    ]
+                },
+                {
+                    "json_value": "expdate",
+                    "ru_value": "Срок годности",
+                    "values": [
+                        "24 мес."
+                    ]
+                },
+                {
+                    "json_value": "description",
+                    "ru_value": "Описание",
+                    "values": null
+                },
+                {
+                    "json_value": "style",
+                    "ru_value": "Стиль",
+                    "values": [
+                        "бланш",
+                        "бланш1"
+                    ]
+                },
+                {
+                    "json_value": "fermentation",
+                    "ru_value": "Тип брожения",
+                    "values": [
+                        "низовое",
+                        "верховое"
+                    ]
+                },
+                {
+                    "json_value": "gaz",
+                    "ru_value": "Газация",
+                    "values": []
+                },
+                {
+                    "json_value": "density",
+                    "ru_value": "Плотность",
+                    "values": [
+                        "12.0%",
+                        "11.0%"
+                    ]
+                },
+                {
+                    "json_value": "strength",
+                    "ru_value": "Крепость",
+                    "values": [
+                        "5.0%"
+                    ]
+                },
+                {
+                    "json_value": "consist",
+                    "ru_value": "Состав",
+                    "values": [
+                        "чай зеленый сенча"
+                    ]
+                }
+    ]
     ```
-    
