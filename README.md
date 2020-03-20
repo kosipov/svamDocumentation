@@ -8,7 +8,7 @@
 ----
 * **URL**
   
-  /ouauth/token
+  /oauth/token
 
 * **Метод**
   
