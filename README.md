@@ -357,7 +357,7 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/basket/:id
+  /api/basket/add/:id
 
 * **Method:**
 
