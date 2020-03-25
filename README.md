@@ -357,17 +357,21 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/basket/add/:id
+  /api/basket/add
 
 * **Method:**
 
-  `GET`
+  `POST`
   
 *  **URL Params**
 
    **Обязательные:**
  
-   `id=[integer]` - id торгового прделожения
+   `id=[integer]` - id торгового предложения(извлекается поле id из массива packing)
+   
+   **Необязательные:**
+   
+   `count=[integer]` - количество добавляемого товара(по умолчанию = 1)
 
 * **Success Response:**
 
