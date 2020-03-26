@@ -372,24 +372,27 @@ Refresh-token необходим для обновления access-токена
    
    `offer_id[integer_id]=count` 
    
-   **Необязательные:**
-   
-   `count=[integer]` - количество добавляемого товара(по умолчанию = 1)
 
 * **Success Response:**
 
   * **Code:** 200 <br />
     **Content:** 
-```json 
-{
-    "message": "Prof. Elliot Schaden MD add to basket"
-}
-```
+    ```json 
+    {
+        "message": "Prof. Elliot Schaden MD add to basket"
+    }
+    ```
 
 * **Error Response:**
 
   * **Code:** 403 Forbiden <br />
     **Content:** `{ error : "No access rights" }`
+    
+  * **Code:** 422 Unprocessable Entity <br />
+    **Content:** `{ message : "Error add basket"}`
+    
+  * **Code:** 422 Unprocessable Entity <br />
+    **Content:** `{ message: "Item not exist or balance = 0"}`
 
 **Удаление позиции из корзины**
 ----
@@ -535,7 +538,7 @@ Refresh-token необходим для обновления access-токена
   
   ```json
   {
-        "comment": "некоторый комментарий",
+    "comment": "некоторый комментарий"
   }
   ```
   Предполагается, что пользователь, при создании заказа, может оставить какой-то комментарий через этот json комментарий передается в бэк
