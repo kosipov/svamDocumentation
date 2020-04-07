@@ -455,69 +455,37 @@ Refresh-token необходим для обновления access-токена
     **Content:** 
     ```json 
     {
-      "data": {
-          "basket": [
-              {
-                  "type": "offers",
-                  "user_id": 1,
-                  "offer_id": 38,
-                  "id": 3,
-                  "attributes": {
-                      "name": "Marlee King V",
-                      "logo": null,
-                      "price": "8010.0000",
-                      "packing": "Кег 20L"
-                  },
-                  "count": 1,
-                  "remove_basket": "http://svam.test/api/basket/delete/3"
-              },
-              {
-                  "type": "offers",
-                  "user_id": 1,
-                  "offer_id": 3,
-                  "id": 4,
-                  "attributes": {
-                      "name": "Miss Aleen Mante",
-                      "logo": null,
-                      "price": "5328.0000",
-                      "packing": "Кег 20L"
-                  },
-                  "count": 1,
-                  "remove_basket": "http://svam.test/api/basket/delete/4"
-              },
-              {
-                  "type": "offers",
-                  "user_id": 1,
-                  "offer_id": 22,
-                  "id": 5,
-                  "attributes": {
-                      "name": "Vivian Bednar III",
-                      "logo": null,
-                      "price": "2432.0000",
-                      "packing": "Кег 20L"
-                  },
-                  "count": 2,
-                  "remove_basket": "http://svam.test/api/basket/delete/5"
-              }
-          ],
-          "link_create": "http://svam.test/api/orders/new",
-          "summ": 18202
-      },
-      "links": {
-          "first": "http://svam.test/api/basket?page=1",
-          "last": "http://svam.test/api/basket?page=1",
-          "prev": null,
-          "next": null
-      },
-      "meta": {
-          "current_page": 1,
-          "from": 1,
-          "last_page": 1,
-          "path": "http://svam.test/api/basket",
-          "per_page": 15,
-          "to": 4,
-          "total": 4
-      }
+        "data": [
+            {
+                "id": 4,
+                "status": "NW",
+                "summ_price": "288754.0000",
+                "date": "2020-04-07T09:51:32.000000Z",
+                "link": "https://svam.dev.kosipov.ru/api/orders/4"
+            },
+            {
+                "id": 5,
+                "status": "NW",
+                "summ_price": "12048.0000",
+                "date": "2020-04-07T09:58:50.000000Z",
+                "link": "https://svam.dev.kosipov.ru/api/orders/5"
+            }
+        ],
+        "links": {
+            "first": "https://svam.dev.kosipov.ru/api/orders?page=1",
+            "last": "https://svam.dev.kosipov.ru/api/orders?page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "path": "https://svam.dev.kosipov.ru/api/orders",
+            "per_page": 15,
+            "to": 4,
+            "total": 4
+        }
     }
     ```
 
@@ -532,7 +500,7 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/order/new
+  /api/orders/new
 
 * **Method:**
 
@@ -581,111 +549,223 @@ Refresh-token необходим для обновления access-токена
     **Content:** 
     ```json 
     [
-                {
-                    "json_value": "country",
-                    "ru_value": "Страна",
-                    "values": [
-                        "Argentina",
-                        "Bhutan",
-                        "British Virgin Islands",
-                        "Canada",
-                        "Cape Verde",
-                        "Cocos (Keeling) Islands",
-                        "Costa Rica",
-                        "Cyprus",
-                        "Fiji",
-                        "Greece",
-                        "Guadeloupe",
-                        "Haiti",
-                        "Heard Island and McDonald Islands",
-                        "Iceland",
-                        "Isle of Man",
-                        "Korea",
-                        "Lebanon",
-                        "Lesotho",
-                        "Liechtenstein",
-                        "Mayotte",
-                        "Mexico",
-                        "Micronesia",
-                        "Moldova",
-                        "Norfolk Island",
-                        "Oman",
-                        "Pakistan",
-                        "Papua New Guinea",
-                        "Puerto Rico",
-                        "Saint Helena",
-                        "Saint Lucia",
-                        "Samoa",
-                        "San Marino",
-                        "Seychelles",
-                        "Sri Lanka",
-                        "Thailand",
-                        "Turkey",
-                        "Western Sahara"
-                    ]
-                },
-                {
-                    "json_value": "manufacturer",
-                    "ru_value": "Производитель",
-                    "values": [
-                        "Philip Mayer",
-                        "Рога и копыта"
-                    ]
-                },
-                {
-                    "json_value": "expdate",
-                    "ru_value": "Срок годности",
-                    "values": [
-                        "24 мес."
-                    ]
-                },
-                {
-                    "json_value": "description",
-                    "ru_value": "Описание",
-                    "values": null
-                },
-                {
-                    "json_value": "style",
-                    "ru_value": "Стиль",
-                    "values": [
-                        "бланш",
-                        "бланш1"
-                    ]
-                },
-                {
-                    "json_value": "fermentation",
-                    "ru_value": "Тип брожения",
-                    "values": [
-                        "низовое",
-                        "верховое"
-                    ]
-                },
-                {
-                    "json_value": "gaz",
-                    "ru_value": "Газация",
-                    "values": []
-                },
-                {
-                    "json_value": "density",
-                    "ru_value": "Плотность",
-                    "values": [
-                        "12.0%",
-                        "11.0%"
-                    ]
-                },
-                {
-                    "json_value": "strength",
-                    "ru_value": "Крепость",
-                    "values": [
-                        "5.0%"
-                    ]
-                },
-                {
-                    "json_value": "consist",
-                    "ru_value": "Состав",
-                    "values": [
-                        "чай зеленый сенча"
+        {
+            "json_value": "country",
+            "ru_value": "Страна",
+            "values": [
+                "",
+                "Argentina",
+                "Bhutan",
+                "British Virgin Islands",
+                "Canada",
+                "Cape Verde",
+                "Cocos (Keeling) Islands",
+                "Costa Rica",
+                "Fiji",
+                "Greece",
+                "Guadeloupe",
+                "Haiti",
+                "Heard Island and McDonald Islands",
+                "Iceland",
+                "Isle of Man",
+                "Korea",
+                "Lebanon",
+                "Liechtenstein",
+                "Mayotte",
+                "Mexico",
+                "Micronesia",
+                "Moldova",
+                "Norfolk Island",
+                "Oman",
+                "Pakistan",
+                "Papua New Guinea",
+                "Russia",
+                "Saint Lucia",
+                "Samoa",
+                "San Marino",
+                "Seychelles",
+                "Sri Lanka",
+                "Thailand",
+                "Turkey",
+                "Western Sahara"
+            ],
+            "type_id": "general"
+        },
+        {
+            "json_value": "manufacturer",
+            "ru_value": "Производитель",
+            "values": [
+                "Aspall Cyder Limited",
+                "Bayerische Staatsbrauerei Weihenstephan",
+                "Philip Mayer",
+                "Рога и копыта"
+            ],
+            "type_id": "general"
+        },
+        {
+            "json_value": "expdate",
+            "ru_value": "Срок годности",
+            "values": [
+                "24 мес."
+            ],
+            "type_id": "general"
+        },
+        {
+            "json_value": "description",
+            "ru_value": "Описание",
+            "values": null,
+            "type_id": "general"
+        },
+        {
+            "json_value": "style",
+            "ru_value": "Стиль",
+            "values": [
+                "null",
+                "бланш",
+                "бланш1"
+            ],
+            "type_id": 1
+        },
+        {
+            "json_value": "fermentation",
+            "ru_value": "Тип брожения",
+            "values": [
+                "null",
+                "верховое",
+                "низовое"
+            ],
+            "type_id": 1
+        },
+        {
+            "json_value": "gaz",
+            "ru_value": "Газация",
+            "values": [],
+            "type_id": 5
+        },
+        {
+            "json_value": "density",
+            "ru_value": "Плотность",
+            "values": [
+                "null",
+                "12.0%",
+                "11.0%"
+            ],
+            "type_id": 1
+        },
+        {
+            "json_value": "strength",
+            "ru_value": "Крепость",
+            "values": [
+                "null",
+                "5.0%"
+            ],
+            "type_id": 1
+        },
+        {
+            "json_value": "consist",
+            "ru_value": "Состав",
+            "values": [
+                "чай зеленый сенча"
+            ],
+            "type_id": 4
+        }
+    ]
+    ```
+    
+    Данный метод также возможно использовать для реализаци механизма фильтрации, с целью получения фильтруемых
+    свойств. В поле type_id указывается id категории товара, для которой существует данное свойство. В случае,
+    если в данном поле указано "general" это означает, что данное свойство является общим для всех товаров.
+    
+
+**Фильтрация товара**
+----
+  Осуществляет фильтрацию товаров по указанным свойствам.
+
+* **URL**
+
+  /api/categories/{id_category}/filter
+
+* **Method:**
+
+  `GET`
+
+* **Example:**
+    
+    ```http://svam.test/api/categories/1/filter?density=12.0%&country=Russia ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "data": {
+            "attributes": {
+                "type": "category",
+                "id": 1,
+                "value": "Пиво"
+            },
+            "relationships": {
+                "drinks": {
+                    "Russia": [
+                        {
+                            "type": "drinks",
+                            "country": "Russia",
+                            "id": 1200,
+                            "attributes": {
+                                "name": "Dr. Camryn Rolfson Jr.",
+                                "price": "200.0000",
+                                "properties": {
+                                    "density": "12.0%",
+                                    "strength": "5.0%"
+                                },
+                                "file": [
+                                    {
+                                        "logo": "http://svam.test/storage/img/pivo1.jpg"
+                                    }
+                                ],
+                                "link": "http://svam.test/api/drinks/1200"
+                            },
+                            "relationships": {
+                                "packing": [
+                                    {
+                                        "id": 1197,
+                                        "price": "6243.0000",
+                                        "pack": "Кег 20L",
+                                        "balance": 0,
+                                        "1c_id": "rGrWa3EzVW",
+                                        "addBasket": "http://svam.test/api/basket/add"
+                                    }
+                                ]
+                            }
+                        }
                     ]
                 }
-    ]
+            },
+            "links": {
+                "first": "http://svam.test/api/categories/1/filter?density=12.0%25&country=Russia&page=1",
+                "last": "http://svam.test/api/categories/1/filter?density=12.0%25&country=Russia&page=1",
+                "prev": null,
+                "next": null
+            },
+            "meta": {
+                "current_page": 1,
+                "from": 1,
+                "last_page": 1,
+                "per_page": 15,
+                "to": 1,
+                "total": 1
+            }
+        }
+    }
+    ```
+
+* **Error Response:**
+
+  * **Code:** 422 Unprocessable Entity <br />
+    **Content:** 
+    ```
+    {
+        "message": "Property not found"
+    }
     ```
