@@ -457,18 +457,59 @@ Refresh-token необходим для обновления access-токена
     {
         "data": [
             {
-                "id": 4,
+                "id": 3,
                 "status": "NW",
-                "summ_price": "288754.0000",
-                "date": "2020-04-07T09:51:32.000000Z",
-                "link": "https://svam.dev.kosipov.ru/api/orders/4"
+                "summ_price": "10464.0000",
+                "date": "2020-03-27T13:22:43.000000Z",
+                "items": {
+                    "0": {
+                        "offer_id": 1215,
+                        "name": "Miss Patience Kassulke",
+                        "tara": "Кег 20L",
+                        "logo": null,
+                        "count": 3,
+                        "price": "2968.0000",
+                        "summ": "8904.0000"
+                    },
+                    "3": {
+                        "offer_id": 1216,
+                        "name": "Jerry VonRueden Jr.",
+                        "tara": "250г, ваккумная упаковка с zip-lock",
+                        "logo": null,
+                        "count": 3,
+                        "price": "520.0000",
+                        "summ": "1560.0000"
+                    }
+                },
+                "link": "http://svam.test/api/orders/3"
             },
             {
-                "id": 5,
+                "id": 4,
                 "status": "NW",
-                "summ_price": "12048.0000",
-                "date": "2020-04-07T09:58:50.000000Z",
-                "link": "https://svam.dev.kosipov.ru/api/orders/5"
+                "summ_price": "10464.0000",
+                "date": "2020-03-27T14:11:34.000000Z",
+                "items": {
+                    "0": {
+                        "offer_id": 1215,
+                        "name": "Miss Patience Kassulke",
+                        "tara": "Кег 20L",
+                        "logo": null,
+                        "count": 3,
+                        "price": "2968.0000",
+                        "summ": "8904.0000"
+                    },
+                    "3": {
+                        "offer_id": 1216,
+                        "name": "Jerry VonRueden Jr.",
+                        "tara": "250г, ваккумная упаковка с zip-lock",
+                        "logo": null,
+                        "count": 3,
+                        "price": "520.0000",
+                        "summ": "1560.0000"
+                    }
+                },
+                "link": "http://svam.test/api/orders/4"
+            },
             }
         ],
         "links": {
@@ -528,7 +569,47 @@ Refresh-token необходим для обновления access-токена
 * **Error Response:**
 
   * **Code:** 403 Forbidden <br />
-    **Content:** `{"message": "No access rights"}`      
+    **Content:** `{"message": "No access rights"}`
+    
+      
+**Дублировать заказ**
+----
+  Дублируется заказ из тех позиций, которые указаны в текущем заказе
+
+* **URL**
+
+  /api/orders/{order_id}/duplicate
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+  
+  ```json
+  {
+    "comment": "некоторый комментарий"
+  }
+  ```
+  Предполагается, что пользователь, при дублировании заказа, может оставить какой-то комментарий через этот json комментарий передается в бэк
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "message": "Order succesfull"
+    }
+    ```
+
+* **Error Response:**
+
+  * **Code:** 403 Forbidden <br />
+    **Content:** `{"message": "No access rights"}`
+    
+  * **Code:** 404 Not found <br />
+    **Content:** `{"message": "Object doesnt exist!"}`
 
 
 **Список свойств товаров**
