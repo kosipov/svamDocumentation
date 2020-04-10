@@ -461,26 +461,6 @@ Refresh-token необходим для обновления access-токена
                 "status": "NW",
                 "summ_price": "10464.0000",
                 "date": "2020-03-27T13:22:43.000000Z",
-                "items": {
-                    "0": {
-                        "offer_id": 1215,
-                        "name": "Miss Patience Kassulke",
-                        "tara": "Кег 20L",
-                        "logo": null,
-                        "count": 3,
-                        "price": "2968.0000",
-                        "summ": "8904.0000"
-                    },
-                    "3": {
-                        "offer_id": 1216,
-                        "name": "Jerry VonRueden Jr.",
-                        "tara": "250г, ваккумная упаковка с zip-lock",
-                        "logo": null,
-                        "count": 3,
-                        "price": "520.0000",
-                        "summ": "1560.0000"
-                    }
-                },
                 "link": "http://svam.test/api/orders/3"
             },
             {
@@ -488,26 +468,6 @@ Refresh-token необходим для обновления access-токена
                 "status": "NW",
                 "summ_price": "10464.0000",
                 "date": "2020-03-27T14:11:34.000000Z",
-                "items": {
-                    "0": {
-                        "offer_id": 1215,
-                        "name": "Miss Patience Kassulke",
-                        "tara": "Кег 20L",
-                        "logo": null,
-                        "count": 3,
-                        "price": "2968.0000",
-                        "summ": "8904.0000"
-                    },
-                    "3": {
-                        "offer_id": 1216,
-                        "name": "Jerry VonRueden Jr.",
-                        "tara": "250г, ваккумная упаковка с zip-lock",
-                        "logo": null,
-                        "count": 3,
-                        "price": "520.0000",
-                        "summ": "1560.0000"
-                    }
-                },
                 "link": "http://svam.test/api/orders/4"
             },
             }
@@ -850,5 +810,88 @@ Refresh-token необходим для обновления access-токена
     ```
     {
         "message": "Property not found"
+    }
+    ```
+
+
+**Поиск товара**
+----
+   Осуществляет поиск товаров по указанному слову. Поиск возможно осуществлять как по всем товарам, так и внутри категорий.
+
+* **URL**
+
+  /api/categories/{id_category}/search?query=Поисковая фраза
+  
+  либо
+  
+  /api/drinks/search?query=Поисковая фраза
+
+* **Method:**
+
+  `GET`
+
+* **Example:**
+    
+    ```http://svam.test/api/categories/1/search?query=Kelton ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "data": {
+            "attributes": {
+                "type": "category",
+                "id": 1,
+                "value": "Пиво"
+            },
+            "relationships": {
+                "drinks": {
+                    "Argentina": [
+                        {
+                            "type": "drinks",
+                            "country": "Argentina",
+                            "id": 1208,
+                            "attributes": {
+                                "name": "Kelton Schaden",
+                                "properties": {
+                                    "density": "11.0%",
+                                    "strength": "5.0%"
+                                },
+                                "file": [],
+                                "link": "https://svam.dev.kosipov.ru/api/drinks/1208"
+                            },
+                            "relationships": {
+                                "packing": [
+                                    {
+                                        "id": 1205,
+                                        "price": "3306.0000",
+                                        "pack": "Кег 20L",
+                                        "balance": 65,
+                                        "1c_id": "zLasQGrF8w",
+                                        "addBasket": "https://svam.dev.kosipov.ru/api/basket/add"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "links": {
+                "first": "https://svam.dev.kosipov.ru/api/categories/1/search?query=Kelton&page=1",
+                "last": "https://svam.dev.kosipov.ru/api/categories/1/search?query=Kelton&page=1",
+                "prev": null,
+                "next": null
+            },
+            "meta": {
+                "current_page": 1,
+                "from": 1,
+                "last_page": 1,
+                "per_page": 15,
+                "to": 1,
+                "total": 1
+            }
+        }
     }
     ```
