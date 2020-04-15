@@ -578,7 +578,7 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/drinks/properties
+  /api/drinks/properties/{id_category}
 
 * **Method:**
 
