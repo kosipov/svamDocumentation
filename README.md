@@ -1058,3 +1058,133 @@ Refresh-token необходим для обновления access-токена
         }
     }
     ```
+
+**Информация об организации**
+----
+  Возвращает информацию об организации пользователя для админки и странички об организации
+
+* **URL**
+
+  /api/organization
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "data": {
+            "id": "456Н-2189",
+            "name": "ООО Моя оборона",
+            "filename": null,
+            "debit": null,
+            "credit": null,
+            "count_user": 2
+        }
+    }
+    ```
+    
+    
+**Сотрудники**
+----
+  Возвращает информацию о сотрудниках организации
+
+* **URL**
+
+  /api/users
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "data": [
+            {
+                "id": 2,
+                "name": "Petr Tester",
+                "email": "petr@test.ru",
+                "email_verified_at": null,
+                "credit": null,
+                "debit": null,
+                "role_id": "director",
+                "organization_id": "456Н-2189",
+                "created_at": "2020-04-17 10:02:17",
+                "updated_at": "2020-04-17 10:02:17"
+            },
+            {
+                "id": 3,
+                "name": "Василий Манагеров",
+                "email": "vaska@test.ru",
+                "email_verified_at": null,
+                "credit": null,
+                "debit": null,
+                "role_id": "manager",
+                "organization_id": "456Н-2189",
+                "created_at": "2020-04-21 12:37:25",
+                "updated_at": "2020-04-21 12:37:25"
+            }
+        ],
+        "links": {
+            "first": "http://svam.test/api/users?page=1",
+            "last": "http://svam.test/api/users?page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "path": "http://svam.test/api/users",
+            "per_page": 15,
+            "to": 2,
+            "total": 2
+        }
+    }
+    ```
+
+**Добавить менеджера**
+----
+  Добавляет менеджера в организацию пользователя(для добавление необходимо иметь учетную запись директора организации) 
+
+* **URL**
+
+  /api/users/add
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+  
+  ```json
+  {
+    "name":"Petr Tester",
+    "phone": "+79990999999",
+    "email": "petr@test.ru"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        {
+            "name": "Petr Tester",
+            "password": "roOsRa2S",
+            "e-mail": "petr123@test.ru",
+            "organization": "ООО Моя оборона"
+            "phone": "+79990999999"
+        }
+    }
+    ```
