@@ -316,7 +316,11 @@ Refresh-token необходим для обновления access-токена
                         "density": "12.0%",
                         "strength": "5.0%"
                     },
-                    "file": [],
+                    "file": [
+                                {
+                                    "logo": "https://svam.dev.kosipov.ru/storage/img/pivo1.jpg"
+                                }
+                            ],
                     "link": "http://svam.test/api/drinks/1199"
                 },
                 "relationships": {
@@ -412,7 +416,14 @@ Refresh-token необходим для обновления access-токена
             "strength": "5.0%",
             "fermentation": "верховое"
         },
-        "files": []
+        "files": [
+            {
+                "logo": "https://svam.dev.kosipov.ru/storage/img/pivo1.jpg"
+            },
+            {
+                "logo": "https://svam.dev.kosipov.ru/storage/img/pivo2.jpg"
+            }
+]
     }
 }
 ```
