@@ -91,11 +91,10 @@ Refresh-token необходим для обновления access-токена
   
   ```json
     {
-        "name":"Petr Tester",
         "email": "petr@test.ru",
-        "name_company": "ООО Моя оборона",
         "phone": "+79991234567",
-        "dogovor": "456Н-2189"
+        "inn": "456Н-2189",
+        "message": "здесь какое-то сообщение"
     }
   ```
   
@@ -398,7 +397,6 @@ Refresh-token необходим для обновления access-токена
         "country": "Russia",
         "manufacturer": "Рога и копыта",
         "expdate": "24 мес.",
-        "price": "200.0000",
         "packing": [
             {
                 "id": 1211,
