@@ -300,54 +300,57 @@ Refresh-token необходим для обновления access-токена
 
   * **Code:** 200 <br />
     **Content:** 
-```json {
-    "type": "category",
-    "id": 1,
-    "value": "Пиво",
-    "relationships": {
-        "drinks": [
-            {
-                "type": "drinks",
-                "drink_id": 2,
-                "attributes": {
-                    "name": "Prof. Elliot Schaden MD",
-                    "country": "Россия",
-                    "properties": {
-                        "density": "12.0%",
-                        "strength": "5.0%"
-                    },
-                    "file": [
-                                {
-                                    "logo": "https://svam.dev.kosipov.ru/storage/img/pivo1.jpg"
-                                }
-                            ],
-                    "link": "http://svam.test/api/drinks/1199"
+```json 
+{
+    "data": [
+        {
+            "type": "drinks",
+            "country": "Россия",
+            "id": 233,
+            "attributes": {
+                "name": "Нат Баттер (Nut Butter)",
+                "properties": {
+                    "density": "12.0%",
+                    "strength": "5.0%"
                 },
-                "relationships": {
-                    "packing": [
-                        {
-                            "id": 1196,
-                            "price": "7868.0000",
-                            "pack": "Кег 20L",
-                            "balance": 25,
-                            "1c_id": "bRLsTRNnhO",
-                            "addBasket": "http://svam.test/api/basket/add/1196"
-                        }
-                    ]
-                }                    
+                "price": "Цена по запросу",
+                "file": [
+                    {
+                        "logo": null
+                    }
+                ],
+                "link": "http://svam.test/api/drinks/233"
             },
-            ],
-            "first_page_url": "http://svam.test/api/categories/1?page=1",
-            "from": 1,
-            "last_page": 1,
-            "last_page_url": "http://svam.test/api/categories/1?page=1",
-            "next_page_url": null,
-            "path": "http://svam.test/api/categories/1",
-            "per_page": 15,
-            "prev_page_url": null,
-            "to": 1,
-            "total": 1
+            "relationships": {
+                "packing": [
+                    {
+                        "id": 218,
+                        "price": "Цена по запросу",
+                        "tara": " БУТ 0,5л*12 шт.",
+                        "taraQuantity": 12,
+                        "unit": "шт",
+                        "balance": null,
+                        "1c_id": null,
+                        "addBasket": "http://svam.test/api/basket/add"
+                    }
+                ]
+            }
         }
+    ],
+    "links": {
+        "first": "http://svam.test/api/categories/1/filter?page=1",
+        "last": "http://svam.test/api/categories/1/filter?page=1",
+        "prev": null,
+        "next": null
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 1,
+        "path": "http://svam.test/api/categories/1/filter",
+        "per_page": 15,
+        "to": 1,
+        "total": 1
     }
 }
 ```
@@ -959,63 +962,55 @@ Refresh-token необходим для обновления access-токена
     **Content:** 
     ```json 
     {
-        "data": {
-            "attributes": {
-                "type": "category",
-                "id": 1,
-                "value": "Пиво"
-            },
-            "relationships": {
-                "drinks": {
-                    "Russia": [
+        "data": [
+            {
+                "type": "drinks",
+                "country": "Россия",
+                "id": 233,
+                "attributes": {
+                    "name": "Нат Баттер (Nut Butter)",
+                    "properties": {
+                        "density": "12.0%",
+                        "strength": "5.0%"
+                    },
+                    "price": "Цена по запросу",
+                    "file": [
                         {
-                            "type": "drinks",
-                            "country": "Russia",
-                            "id": 1200,
-                            "attributes": {
-                                "name": "Dr. Camryn Rolfson Jr.",
-                                "price": "200.0000",
-                                "properties": {
-                                    "density": "12.0%",
-                                    "strength": "5.0%"
-                                },
-                                "file": [
-                                    {
-                                        "logo": "http://svam.test/storage/img/pivo1.jpg"
-                                    }
-                                ],
-                                "link": "http://svam.test/api/drinks/1200"
-                            },
-                            "relationships": {
-                                "packing": [
-                                    {
-                                        "id": 1197,
-                                        "price": "6243.0000",
-                                        "pack": "Кег 20L",
-                                        "balance": 0,
-                                        "1c_id": "rGrWa3EzVW",
-                                        "addBasket": "http://svam.test/api/basket/add"
-                                    }
-                                ]
-                            }
+                            "logo": null
+                        }
+                    ],
+                    "link": "http://svam.test/api/drinks/233"
+                },
+                "relationships": {
+                    "packing": [
+                        {
+                            "id": 218,
+                            "price": "Цена по запросу",
+                            "tara": " БУТ 0,5л*12 шт.",
+                            "taraQuantity": 12,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
                         }
                     ]
                 }
-            },
-            "links": {
-                "first": "http://svam.test/api/categories/1/filter?density=12.0%25&country=Russia&page=1",
-                "last": "http://svam.test/api/categories/1/filter?density=12.0%25&country=Russia&page=1",
-                "prev": null,
-                "next": null
-            },
-            "meta": {
-                "current_page": 1,
-                "from": 1,
-                "last_page": 1,
-                "per_page": 15,
-                "to": 1,
-                "total": 1
             }
+        ],
+        "links": {
+            "first": "http://svam.test/api/categories/1/filter?page=1",
+            "last": "http://svam.test/api/categories/1/filter?page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "path": "http://svam.test/api/categories/1/filter",
+            "per_page": 15,
+            "to": 1,
+            "total": 1
         }
     }
     ```
@@ -1057,58 +1052,152 @@ Refresh-token необходим для обновления access-токена
     **Content:** 
     ```json 
     {
-        "data": {
-            "attributes": {
-                "type": "category",
-                "id": 1,
-                "value": "Пиво"
-            },
-            "relationships": {
-                "drinks": {
-                    "Argentina": [
+        "data": [
+            {
+                "type": "drinks",
+                "country": "Аргентина",
+                "id": 235,
+                "attributes": {
+                    "name": "Клаштер тёмный (Klaster tmave)",
+                    "category": "Пиво",
+                    "properties": null,
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/235"
+                },
+                "relationships": {
+                    "packing": [
                         {
-                            "type": "drinks",
-                            "country": "Argentina",
-                            "id": 1208,
-                            "attributes": {
-                                "name": "Kelton Schaden",
-                                "properties": {
-                                    "density": "11.0%",
-                                    "strength": "5.0%"
-                                },
-                                "file": [],
-                                "link": "https://svam.dev.kosipov.ru/api/drinks/1208"
-                            },
-                            "relationships": {
-                                "packing": [
-                                    {
-                                        "id": 1205,
-                                        "price": "3306.0000",
-                                        "pack": "Кег 20L",
-                                        "balance": 65,
-                                        "1c_id": "zLasQGrF8w",
-                                        "addBasket": "https://svam.dev.kosipov.ru/api/basket/add"
-                                    }
-                                ]
-                            }
+                            "id": 220,
+                            "price": "Цена по запросу",
+                            "tara": " Ж/Б. 0,5 х 24 шт. ",
+                            "taraQuantity": 24,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
                         }
                     ]
                 }
             },
-            "links": {
-                "first": "https://svam.dev.kosipov.ru/api/categories/1/search?query=Kelton&page=1",
-                "last": "https://svam.dev.kosipov.ru/api/categories/1/search?query=Kelton&page=1",
-                "prev": null,
-                "next": null
+            {
+                "type": "drinks",
+                "country": "Россия",
+                "id": 244,
+                "attributes": {
+                    "name": "Клаштер светлый (Klaster svetle)",
+                    "category": "Пиво",
+                    "properties": null,
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/244"
+                },
+                "relationships": {
+                    "packing": [
+                        {
+                            "id": 229,
+                            "price": "Цена по запросу",
+                            "tara": " Ж/Б 0,5 х 24 шт. ",
+                            "taraQuantity": 24,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
+                        }
+                    ]
+                }
             },
-            "meta": {
-                "current_page": 1,
-                "from": 1,
-                "last_page": 1,
-                "per_page": 15,
-                "to": 1,
-                "total": 1
+            {
+                "type": "drinks",
+                "country": "Россия",
+                "id": 252,
+                "attributes": {
+                    "name": "Клаштер светлый (Klaster svetle)",
+                    "category": "Пиво",
+                    "properties": null,
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/252"
+                },
+                "relationships": {
+                    "packing": [
+                        {
+                            "id": 237,
+                            "price": "Цена по запросу",
+                            "tara": " бут. 0,5 х 20 шт. ",
+                            "taraQuantity": 20,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "drinks",
+                "country": "Россия",
+                "id": 256,
+                "attributes": {
+                    "name": "Клаштер тёмный (Klaster tmave)",
+                    "category": "Пиво",
+                    "properties": null,
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/256"
+                },
+                "relationships": {
+                    "packing": [
+                        {
+                            "id": 241,
+                            "price": "Цена по запросу",
+                            "tara": " бут. 0,5 х 20 шт. ",
+                            "taraQuantity": 20,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "drinks",
+                "country": "Россия",
+                "id": 320,
+                "attributes": {
+                    "name": "Клаштер светлый (Klaster svetle)",
+                    "category": "Пиво",
+                    "properties": null,
+                    "file": [],
+                    "link": "http://svam.test/api/drinks/320"
+                },
+                "relationships": {
+                    "packing": [
+                        {
+                            "id": 305,
+                            "price": "Цена по запросу",
+                            "tara": " КЕГ 20 л.",
+                            "taraQuantity": null,
+                            "unit": "шт",
+                            "balance": null,
+                            "1c_id": null,
+                            "addBasket": "http://svam.test/api/basket/add"
+                        }
+                    ]
+                }
             }
+        ],
+        "links": {
+            "first": "http://svam.test/api/drinks/search?query=%D0%9A%D0%BB%D0%B0%D1%88%D1%82%D0%B5%D1%80&page=1",
+            "last": "http://svam.test/api/drinks/search?query=%D0%9A%D0%BB%D0%B0%D1%88%D1%82%D0%B5%D1%80&page=1",
+            "prev": null,
+            "next": null
+        },
+        "meta": {
+            "current_page": 1,
+            "from": 1,
+            "last_page": 1,
+            "path": "http://svam.test/api/drinks/search",
+            "per_page": 15,
+            "to": 5,
+            "total": 5
         }
     }
     ```
