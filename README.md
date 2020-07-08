@@ -188,28 +188,20 @@ Refresh-token необходим для обновления access-токена
     ```json 
     {
         "data": {
-            "id": 2,
-            "name": "Petr Tester",
-            "email": "petr@test.ru",
-            "credit": null,
-            "debit": null,
-            "organization": "ООО Моя оборона",
-            "dogovor": "456Н-2189",
-            "logo": null,
+            "id": 32,
+            "username": "ivan",
+            "inn": "7704350685",
             "address": [
                 {
-                    "city": "Москва",
-                    "home": "89",
-                    "street": "Московское шоссе",
-                    "zip-code": 278987
-                },
-                {
-                    "city": "Екатеринбург",
-                    "home": "123а",
-                    "street": "пр-кт Летова",
-                    "zip-code": 228228
+                    "id": 11,
+                    "organization_id": "7704350685",
+                    "address": {
+                        "street": "улица Пушкина-колотушкина"
+                    }
                 }
-            ]
+            ],
+            "phone": null,
+            "credit": "0.0000"
         }
     }
     ```
