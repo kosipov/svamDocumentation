@@ -190,6 +190,7 @@ Refresh-token необходим для обновления access-токена
         "data": {
             "id": 32,
             "username": "ivan",
+            "organization": "ДОРОНИН СЕРГЕЙ ВАСИЛЬЕВИЧ",
             "inn": "7704350685",
             "address": [
                 {
