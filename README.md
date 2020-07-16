@@ -202,7 +202,8 @@ Refresh-token необходим для обновления access-токена
                 }
             ],
             "phone": null,
-            "credit": "0.0000"
+            "credit": "0.0000",
+            "count_users": 1
         }
     }
     ```
