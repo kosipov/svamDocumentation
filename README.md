@@ -1227,4 +1227,141 @@ Refresh-token необходим для обновления access-токена
         ]
     ```
     
-    
+**Информация об движениях по задолженности организации**
+----
+  Возвращает информацию о движении по договорам организации
+
+* **URL**
+
+  /api/dogovors
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+        {
+            "data": [
+                {
+                    "id": 3,
+                    "name": "Договор № ВР-17-586 от 01.03.2017 г",
+                    "items": [
+                        {
+                            "id": 5,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000057011 от 12.11.2019 8:20:38",
+                            "start_balance": null,
+                            "receipt": "282183.03",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-11-12",
+                            "pay_date": "2019-12-22",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 6,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000058317 от 19.11.2019 11:08:56",
+                            "start_balance": null,
+                            "receipt": "62557.87",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-11-19",
+                            "pay_date": "2019-12-29",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 7,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000062559 от 10.12.2019 10:08:50",
+                            "start_balance": null,
+                            "receipt": "291269.38",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-12-10",
+                            "pay_date": "2020-01-19",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 8,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000055543 от 05.11.2019 9:57:16",
+                            "start_balance": null,
+                            "receipt": "565565.21",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-11-05",
+                            "pay_date": "2019-12-15",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 9,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000054095 от 29.10.2019 11:23:54",
+                            "start_balance": null,
+                            "receipt": "49595.7",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-10-29",
+                            "pay_date": "2019-12-08",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 10,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000061203 от 03.12.2019 9:04:54",
+                            "start_balance": null,
+                            "receipt": "230305.55",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-12-03",
+                            "pay_date": "2020-01-12",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 11,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000059764 от 26.11.2019 8:28:11",
+                            "start_balance": null,
+                            "receipt": "60384.91",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-11-26",
+                            "pay_date": "2020-01-05",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        },
+                        {
+                            "id": 12,
+                            "dogovor_id": 3,
+                            "name": "Реализация товаров и услуг СГ000052899 от 22.10.2019 12:08:24",
+                            "start_balance": null,
+                            "receipt": "49296.51",
+                            "consumption": null,
+                            "end_balance": null,
+                            "start_date": "2019-10-22",
+                            "pay_date": "2019-12-01",
+                            "created_at": "2020-07-17 17:09:21",
+                            "updated_at": "2020-07-17 17:09:21"
+                        }
+                    ],
+                    "sum_receipt": "1591158.16",
+                    "sum_consumption": 0,
+                    "sum_end_balance": 0
+                }
+            ],
+            "all_sum_receipt": 1591158.16,
+            "sum_consumption": 0,
+            "sum_end_balance": 0
+        }
+    ```
