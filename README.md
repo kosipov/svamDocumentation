@@ -326,6 +326,7 @@ Refresh-token необходим для обновления access-токена
                         "tara": " БУТ 0,5л*12 шт.",
                         "taraQuantity": 12,
                         "unit": "шт",
+                        "multiplicity": 2
                         "balance": null,
                         "1c_id": null,
                         "addBasket": "http://svam.test/api/basket/add"
@@ -405,6 +406,7 @@ Refresh-token необходим для обновления access-токена
                 "price": "2008.0000",
                 "1c_id": "MAtUgee9v0",
                 "balance": 6,
+                "multiplicity": 2,
                 "created_at": "2020-03-13 14:54:26",
                 "updated_at": "2020-04-07 09:58:50"
             }
@@ -475,7 +477,8 @@ Refresh-token необходим для обновления access-токена
                     "name": "Prof. Elliot Schaden MD",
                     "logo": null,
                     "price": "1595.0000",
-                    "packing": "Кег 20L"
+                    "packing": "Кег 20L",
+                    "multiplicity": 2,
                 },
                 "count": 1,
                 "remove_basket": "http://svam.test/api/basket/delete/2"
