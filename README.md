@@ -331,7 +331,17 @@ Refresh-token необходим для обновления access-токена
                         "1c_id": null,
                         "addBasket": "http://svam.test/api/basket/add"
                     }
-                ]
+                ],
+                "bottle_packing": [
+                    {
+                        "id": 5,
+                        "offer_id": 19,
+                        "packing_quantity": 8,
+                        "packing_multiplicity": 1,
+                        "created_at": "2020-09-03 22:30:00",
+                        "updated_at": "2020-09-03 22:30:00"
+                    }
+                ],
             }
         }
     ],
@@ -408,7 +418,17 @@ Refresh-token необходим для обновления access-токена
                 "balance": 6,
                 "multiplicity": 2,
                 "created_at": "2020-03-13 14:54:26",
-                "updated_at": "2020-04-07 09:58:50"
+                "updated_at": "2020-04-07 09:58:50",
+                "bottle_packings": [
+                    {
+                        "id": 5,
+                        "offer_id": 19,
+                        "packing_quantity": 8,
+                        "packing_multiplicity": 1,
+                        "created_at": "2020-09-03 22:30:00",
+                        "updated_at": "2020-09-03 22:30:00"
+                    }
+                ]
             }
         ],
         "properties": {
@@ -526,12 +546,23 @@ Refresh-token необходим для обновления access-токена
 
    **Обязательные:**
  
-    ***В теле запроса передается массив json. В качестве индекса массива передается идентификатор торгового предложения(поле id в массиве packings) 
+    ***В теле запроса передаются два массива json. 
+    В массиве bottle передается идентификатор штучного товара(packings),
+    в массиве bottle_packing передается идентификатор, так называемого ящика.
     в качестве значения элемента массива передается количество добавляемых элементов***
    
    ``` json
    {
-     "offer_id": count
+     "bottle": 
+       {
+          "3": 6
+       }
+       ,
+     "bottle_packing":
+       {
+         "8": 1
+       }
+     
    }
    ``` 
    
