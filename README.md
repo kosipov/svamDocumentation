@@ -311,6 +311,7 @@ Refresh-token необходим для обновления access-токена
                     "strength": "5.0%"
                 },
                 "price": "Цена по запросу",
+                "volume": 0.5 л.,
                 "file": [
                     {
                         "logo": null
@@ -406,6 +407,7 @@ Refresh-token необходим для обновления access-токена
             "value": "Пиво"
         },
         "country": "Russia",
+        "volume": 0.5 л.,
         "manufacturer": "Рога и копыта",
         "expdate": "24 мес.",
         "packing": [
