@@ -1436,3 +1436,71 @@ Refresh-token необходим для обновления access-токена
             "sum_end_balance": 0
         }
     ```
+    
+**Топ товаров**
+----
+  Возвращает json-данные с товарами, которые необходимо вывести на главной
+
+* **URL**
+
+  /api/top10
+
+* **Method:**
+
+  `GET`
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+```json 
+{
+    [
+        {
+            "type": "drinks",
+            "id": 192,
+            "attributes": {
+                "name": "Вайлд Баррел Манго (WILD BARREL MANGO) ",
+                "description": " ",
+                "country": " ",
+                "manufacturer": null,
+                "expdate": null,
+                "general_offer_id": 192,
+                "price": 0,
+                "packing": [
+                    {
+                        "id": 192,
+                        "price": 0,
+                        "tara": " бут. 0,75 х 12 шт.",
+                        "taraQuantity": 12,
+                        "volume": null,
+                        "unit": "упак",
+                        "multiplicity": null,
+                        "addBasket": "http://svam.test/api/basket/add"
+                    }
+                ],
+                "properties": {
+                    "style": " ",
+                    "strength": " "
+                },
+                "files": [
+                    {
+                        "logo": "http://svam.test/storage/no.png"
+                    }
+                ]
+            }
+        }
+    ]
+}
+```
+ 
+* **Error Response:**
+
+  * **Code:** 404 NOT FOUND <br />
+    **Content:** `{ error : "Object doesn't exist" }`
+
+  OR
+
+  * **Code:** 403 Forbiden <br />
+    **Content:** `{ error : "No access rights" }`
