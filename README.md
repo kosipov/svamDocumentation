@@ -311,7 +311,7 @@ Refresh-token необходим для обновления access-токена
                     "strength": "5.0%"
                 },
                 "price": "Цена по запросу",
-                "volume": 0.5 л.,
+                "general_offer_id": 218
                 "file": [
                     {
                         "logo": null
@@ -330,6 +330,7 @@ Refresh-token необходим для обновления access-токена
                         "multiplicity": 2
                         "balance": null,
                         "1c_id": null,
+                        "volume": "0.5 л."
                         "addBasket": "http://svam.test/api/basket/add"
                     }
                 ],
@@ -407,7 +408,8 @@ Refresh-token необходим для обновления access-токена
             "value": "Пиво"
         },
         "country": "Russia",
-        "volume": 0.5 л.,
+        "general_offer_id": 1211,
+        
         "manufacturer": "Рога и копыта",
         "expdate": "24 мес.",
         "packing": [
@@ -418,6 +420,7 @@ Refresh-token необходим для обновления access-токена
                 "price": "2008.0000",
                 "1c_id": "MAtUgee9v0",
                 "balance": 6,
+                "volume": "0.5 л.",
                 "multiplicity": 2,
                 "created_at": "2020-03-13 14:54:26",
                 "updated_at": "2020-04-07 09:58:50",
@@ -439,7 +442,7 @@ Refresh-token необходим для обновления access-токена
             "strength": "5.0%",
             "fermentation": "верховое"
         },
-        "files": [
+        "file": [
             {
                 "logo": "https://svam.dev.kosipov.ru/storage/img/pivo1.jpg"
             },
