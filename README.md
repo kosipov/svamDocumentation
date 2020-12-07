@@ -1504,3 +1504,73 @@ Refresh-token необходим для обновления access-токена
 
   * **Code:** 403 Forbiden <br />
     **Content:** `{ error : "No access rights" }`
+
+
+**Создать заказ на самовывоз**
+----
+  Создается заказ из тех позиций, которые указаны в корзине для незареганного пользователя
+
+* **URL**
+
+  /api/phyzic/order
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+  
+  ```json
+  {
+      "pickupAddressId": "id адреса для самовывоза",
+      "fio": "ФИО пользователя(надо ли?)",
+      "phoneNumber": "номер пользователя"
+  }
+  ```
+  Для того, чтобы определить id адреса ниже представлен метод /api/phyzic/addreses.
+  
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+    {
+        "message": "Order succesfull"
+    }
+    ```
+
+    
+**Адреса для самовывоза**
+----
+  Возвращает список адресов для самовывоза
+
+* **URL**
+
+  /api/phyzic/addresses
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    ```json 
+        {
+            "data": [
+                {
+                    "id": 1,
+                    "zip-code": "119619",
+                    "state": null,
+                    "city": "Москва",
+                    "street": "Новомещерский проезд",
+                    "home": "9",
+                    "office": null,
+                    "comment": "стр. 1, терминал \"Солнечный\"",
+                    "created_at": null,
+                    "updated_at": null
+                }
+            ]
+        }
+    ```
