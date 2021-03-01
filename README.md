@@ -1570,3 +1570,213 @@ Refresh-token необходим для обновления access-токена
             ]
         }
     ```
+
+**Аутентификация**
+----
+Выдает ключ для доступа к защищенным роутам сервиса новостей
+
+* **URL**
+
+  /oauth/token
+
+* **Метод**
+
+  `POST`
+
+* **Тело запроса**
+
+  ```
+  {
+        "grant_type": "client_credentials",
+        "client_id": id,
+        "client_secret": "соответствующее значение",
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+  ```json
+  {
+      "token_type": "Bearer",
+      "expires_in": 31536000,
+      "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxMSIsImp0aSI6ImIyMzQ2MTc0YTBkY2Y4ZGI1ZDE4NjFlMTRlM2FmNzZmMmFmZjZkMDYzMjNmMzdiY2IyNjhiZTZhOGViZjk0NDMzMDdmOTJkYmZiODkyMzgyIiwiaWF0IjoxNTgzMTI5NTI3LCJuYmYiOjE1ODMxMjk1MjcsImV4cCI6MTYxNDY2NTUyNywic3ViIjoiMTIiLCJzY29wZXMiOlsiKiJdfQ.gYJlgBsC5c29VYOZiXe4BjvEC9twsFaCPl5dx5GzthG4V7pBS-J7-ICfxYgk6ubaJbPsGqsojObWpvNgb_xLuMyBrHlnkSSzIUZVcqU-jK1gDI9ylMJKBTh-3voSg5p9hh9LFEznPyXidDgJBPp4FcnRtYe_5Os2W2qxzUMy50tW1RcDvXv62FkKwPv2G-MEE8TogqkPQ0ULnk-0fKdPt9zDlcTHqyqLB7GaAGWpbsPUR8YKuujBQShiQrKzcopFoqyhNxq9OU3-DkwXvslgVVFqWScc25_7rd7-CE8GE6uERhfI-WvWqDND31LgPk6lSWCgUHlaayt2lSmSLNgX97Hbs_jfth6lKs1fLI35NW5Sf5VQ1r5voezYXyr3gy-SO3tEU_IejhCtWQ9pd7eGIGb5T-Vq3R1nzGeBh7FPZ3CqntDsIXsGK_j4Ny9vCS0cGRJlDFEntPvUa-_SkeXud7QKkRbAdGITo9nwoJsxZyVrwllSpyJgg6wb1rnNif3O9hft9WBtxTJuQeSnTH1SzwVn1NSH1LgQ6lipl7Ea7guHT2jS4-gCMFgbfGrCrrgGKDFM3FUA-gztMwRnIzpVFxkIFinpc-FV8VtIUcwXWG6gpwJqHW7hZX7xL4Rx0YzIzixi2R9mQoSZSjMPhLur5I39Dy_Or3HjMAfow8hMH6o",
+  }
+  ```
+
+**Список новостей**
+----
+Возвращает список новостей
+
+* **URL**
+
+  /api/news
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+          "data": [
+            {
+                "id": 1,
+                "header": "Тест",
+                "preview": "Что-то интересное",
+                "date": "2021-03-01 07:33:49",
+                "cover": "https://i.pinimg.com/originals/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg"
+            }
+          ],
+          "links": {
+              "total": 2,
+              "per_page": 15,
+              "current_page": 1,
+              "next_page_url": null,
+              "prev_page_url": null
+          }
+        }
+    ```
+
+**Новость**
+----
+Возвращает одну из новостей по id
+
+* **URL**
+
+  /api/news/{id}
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "data": {
+              "id": 1,
+              "header": "Тест",
+              "preview": "Что-то интересное",
+              "date": "2021-03-01 07:33:49",
+              "cover": "https://i.pinimg.com/originals/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg",
+              "text": "Или нет"
+            }
+        }
+    ```
+
+
+**Создать новость**
+----
+Создается новость. Доступ к роуту осуществляется только через access токен, который возможно получить по методу из документации выше
+
+* **URL**
+
+  /api/news
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  ```json
+  {
+    "header": "Заголовок",
+    "cover": "Ссылка на обложку",
+    "preview": "Превью новости",
+    "date": "2021-03-01 07:33:11 дата в примерном формате",
+    "text": "Текст новости"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+    {
+        "data": {
+              "id": 2,
+              "header": "Тест",
+              "preview": "Что-то интересное",
+              "date": "2021-03-01 07:33:49",
+              "cover": "https://i.pinimg.com/originals/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg",
+              "text": "Или нет"
+            }
+    }
+    ```
+
+**Изменить новость**
+----
+Изменяется новость. Доступ к роуту осуществляется только через access токен, который возможно получить по методу из документации выше
+
+* **URL**
+
+  /api/news/{id}
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  Здесь необходимо указать либо все, либо несколько из возможных для изменения полей в теле запроса
+
+  ```json
+  {
+    "header": "Заголовок",
+    "cover": "Ссылка на обложку",
+    "preview": "Превью новости",
+    "date": "2021-03-01 07:33:11 дата в примерном формате",
+    "text": "Текст новости"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+    {
+        "data": {
+              "id": 2,
+              "header": "Заголовок",
+              "preview": "Что-то интересное",
+              "date": "2021-03-01 07:33:49",
+              "cover": "https://i.pinimg.com/originals/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg",
+              "text": "Или нет"
+            }
+    }
+    ```
+
+**Удалить новость**
+----
+Удаляет одну из новостей по id. Доступ к роуту осуществляется только через access токен, который возможно получить по методу из документации выше
+
+* **URL**
+
+  /api/news/{id}
+
+* **Method:**
+
+  `DELETE`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "data": {
+              "id": 1,
+              "status": "removed"
+            }
+        }
+    ```
