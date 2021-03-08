@@ -1781,3 +1781,38 @@ Refresh-token необходим для обновления access-токена
             }
         }
     ```
+
+**Отправить токен для пушей**
+----
+Отправляется токен для пушей. Необходимо передать Bearer token в заголовке если пользователь авторизован
+
+* **URL**
+
+  /api/users/push
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  ```json
+  {
+    "cookie": "какая-нибудь кука",
+    "token": "токен с ФБ"
+  }
+  ```
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+    {
+        "data": "ok"
+    }
+    ```
+
+* **Error Response:**
+
+  * **Code:** 404 Not found <br />
+    **Content:** `{"message": "Object doesnt exist!"}`
