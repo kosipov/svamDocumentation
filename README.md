@@ -1816,3 +1816,29 @@ Refresh-token необходим для обновления access-токена
 
   * **Code:** 404 Not found <br />
     **Content:** `{"message": "Object doesnt exist!"}`
+
+
+**Категория товаров**
+----
+Возвращает инфу о категории товара
+
+* **URL**
+
+  /api/drinks/type?ext_id=айдишниктовара_из_1с
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+          "data": {
+            "category_id": 1,
+            "category_name": Пиво
+          }
+        }
+    ```
