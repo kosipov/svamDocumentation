@@ -1899,3 +1899,132 @@ Refresh-token необходим для обновления access-токена
         ],
         "all_credits_sum": 66742.62
       }
+
+
+**Список баннеров**
+----
+Возвращает список баннеров
+
+* **URL**
+
+  /api/banners
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+          {
+            "data": [
+                {
+                    "id": 3,
+                    "href": "http://aaa.su/test1.png"
+                }
+            ],
+            "links": {
+                "total": 1,
+                "per_page": 15,
+                "current_page": 1,
+                "next_page_url": null,
+                "prev_page_url": null
+            }
+          }
+        }
+    ```
+
+**Создать баннер**
+----
+Создается баннер. Доступ к роуту осуществляется только ключ news-key в http-header, значение которого можно уточнить.
+
+* **URL**
+
+  /api/banners
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  ```json
+  {
+    "href": "Ссылка строго через http или https",
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+    {
+        "data": {
+              "id": 4,
+              "href": "http://aaa.su/test1.png"
+            }
+    }
+    ```
+
+**Изменить баннер**
+----
+Изменяется баннер. Доступ к роуту осуществляется только ключ через news-key в http-header, значение которого можно уточнить.
+
+* **URL**
+
+  /api/banners/{id}
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  Здесь необходимо указать либо все, либо несколько из возможных для изменения полей в теле запроса
+
+  ```json
+  {
+    "href": "http://test.test/test"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+    {
+        "data": {
+              "id": 2,
+              "href": "http://test.test/test
+            }
+    }
+    ```
+
+**Удалить баннер**
+----
+Удаляет один из баннеров по id. Доступ к роуту осуществляется только через news-key в http-header, значение которого можно уточнить.
+
+* **URL**
+
+  /api/banners/{id}
+
+* **Method:**
+
+  `DELETE`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "data": {
+              "message": "Delete successful"
+            }
+        }
+    ```
