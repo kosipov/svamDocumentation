@@ -2028,3 +2028,62 @@ Refresh-token необходим для обновления access-токена
             }
         }
     ```
+**Баннер**
+----
+Возвращает один из баннеров по id.
+
+* **URL**
+
+  /api/banners/{id}
+
+* **Method:**
+
+  `GET`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "data": {
+              "id": 1,
+              "href": "https://i.pinimg.com/originals/ab/b6/a8/abb6a800ab2193fcedd9bda566b7402c.jpg",
+            }
+        }
+    ```
+
+**Новинки**
+----
+Добавляет новинки
+
+* **URL**
+
+  /api/set-top
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  Здесь необходимо указать массив с именем top_10_values где каждое значение это пара id: true/false(передавать строго как бул, а не как строку)
+
+  ```json
+  {
+    "top_10_values": {
+            "2960": false,
+            "2961": true
+    }
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "message": "top10 set successful"
+        }
+    ```
