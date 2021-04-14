@@ -2059,7 +2059,7 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/set-top
+  /api/drinks/set-top
 
 * **Method:**
 
