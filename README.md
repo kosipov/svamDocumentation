@@ -2071,10 +2071,14 @@ Refresh-token необходим для обновления access-токена
 
   ```json
   {
-    "top_10_values": {
-            "2960": false,
-            "2961": true
-    }
+    "top_10_values": 
+        [
+           { 
+               "id": 2960,
+               "status": false
+            }
+        ]
+    
   }
   ```
 
