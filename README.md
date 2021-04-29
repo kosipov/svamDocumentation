@@ -2091,3 +2091,34 @@ Refresh-token необходим для обновления access-токена
             "message": "top10 set successful"
         }
     ```
+
+**Картинка товара**
+----
+Добавляет картинку товара
+
+* **URL**
+
+  /api/drinks/set-image
+
+* **Method:**
+
+  `POST`
+
+* **Тело запроса**
+
+  ```json
+  {
+    "drink_id": 111,
+    "drink_href": "https://aaa.ru/aa.jpg"
+  }
+  ```
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "message": "successful"
+        }
+    ```
