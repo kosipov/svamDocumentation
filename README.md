@@ -2098,7 +2098,7 @@ Refresh-token необходим для обновления access-токена
 
 * **URL**
 
-  /api/drinks/set-image
+  /api/drinks/set_image
 
 * **Method:**
 
