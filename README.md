@@ -2122,3 +2122,28 @@ Refresh-token необходим для обновления access-токена
             "message": "successful"
         }
     ```
+
+**Скрыть все**
+----
+Скрывает все товары
+
+* **URL**
+
+  /api/drinks/hidden_all
+
+* **Method:**
+
+  `GET`
+
+* **Тело запроса**
+
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:**
+    ```json 
+        {
+            "message": "successful"
+        }
+    ```
